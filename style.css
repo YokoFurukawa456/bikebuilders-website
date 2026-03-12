@@ -176,7 +176,14 @@ nav a {
     color: var(--white-color);
     font-family: "Helvetica Neue";
     font-weight: bold;
-    font-size: 14px;
+    /* font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap; */
+    color: #FFF;
+    font-family: "Cal Sans";
+    font-size: 21px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
