@@ -753,8 +753,45 @@ main {
     text-align: left;    /* keep text aligned left */
 }
 
-.section-6 .right {
-    flex-shrink: 0;     /* prevent shrinking */
+/* .section-6 .right {
+    flex-shrink: 0;
+} */
+
+.news-letter {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    display: flex;
+    background: var(--white-color);
+    background-color: #ffffff;
+    /* width: 418.626px; */
+    height: 53px;
+    padding: 10.479px 0 10.479px 20px;
+    align-items: center;
+    /* gap: 10.479px; */
+    border-radius: 50px;
+}
+
+.news-input {
+    flex: 1; /* take up remaining space */
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.news-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    height: 53px;
+    white-space: nowrap;
+    background: var(--blue-color);
+
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 0 50px 50px 0;
 }
 
 .section-6 h1 {
