@@ -145,14 +145,6 @@ nav ul li a {
 
 nav a {
     color: var(--white-color);
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    /* font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    white-space: nowrap; */
-    color: #FFF;
     font-family: "Cal Sans";
     font-size: 21px;
     font-style: normal;
@@ -164,10 +156,27 @@ nav a {
 nav ul li a {
     font-family: "Helvetica Neue";
     font-style: normal;
-    font-weight: bold;
     font-size: 14px;
     line-height: 24px;
-    color: #ffffff;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+nav .blank-button {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+nav .white-button {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--dark-blue-color);
     text-decoration: none;
 }
 

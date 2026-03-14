@@ -43,23 +43,30 @@ h1 {
 h2 {
     color: var(--white-color);
     font-family: "Cal Sans";
-    font-size: 32px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 
 }
 
-
-p {
+h3 {
     color: var(--white-color);
     font-family: "Helvetica Neue";
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 30px */
-    letter-spacing: 0.15px;
-    z-index: 100;
+    line-height: normal;
+}
+
+
+p {
+    color: var(--white-color);
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
 }
 
 h4 {
@@ -136,14 +143,6 @@ nav ul li a {
 
 nav a {
     color: var(--white-color);
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    /* font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    white-space: nowrap; */
-    color: #FFF;
     font-family: "Cal Sans";
     font-size: 21px;
     font-style: normal;
@@ -155,10 +154,27 @@ nav a {
 nav ul li a {
     font-family: "Helvetica Neue";
     font-style: normal;
-    font-weight: bold;
     font-size: 14px;
     line-height: 24px;
-    color: #ffffff;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+nav .blank-button {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+nav .white-button {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--dark-blue-color);
     text-decoration: none;
 }
 
@@ -287,7 +303,7 @@ main {
 
 /* hero section */
 
-.hero-section {
+/* .hero-section {
     height: 100vh;
     width: 100%;
     align-items: center;
@@ -295,21 +311,54 @@ main {
     gap: 16px;
     padding: 80px 5% 0 5%; 
     box-sizing: border-box;
+} */
+
+.hero-bg {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero-bg img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    padding: 120px 5% 60px;
 }
 
 .hero-section p {
-    color: ver(--white-color);
+    color: var(--white-color);
     text-align: center;
     font-family: "Helvetica Neue";
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 36px */
+    line-height: 150%; 
 }
 
 .hero-section .buttons {
     align-items: center;
 }
+
 @media (max-width: 1024px) {
     .hero-section {
         flex-direction: column;   /* stack text and image */
@@ -320,86 +369,104 @@ main {
 
 }
 
-/* section-1 */
-.section-1 {
-    align-items: center;
-    justify-content: center;
-}
-
-.section-1 .text {
+.timeline {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 34px;
-    padding-top: 250px;
+    gap: 80px;
+    padding: 100px 0;
 }
 
-.section-1 p {
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+.section-5 {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: static;
+}
+
+.section-1 .text,
+.section-2 .text,
+.section-3 .text,
+.section-4 .text,
+.section-5 .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 0;
+}
+
+.section-1 p,
+.section-4 p,
+.section-5 p {
     color: var(--black-color);
-    text-align: center;
+    text-align: left;
     font-family: "Helvetica Neue";
     font-size: 18px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 30px */
+    line-height: 150%;
     letter-spacing: 0.15px;
 }
 
-/* section-2 */
-.section-2 {
-    align-items: center;
-    justify-content: center;
-}
-
-.images {
-    gap: 30px;
-}
-
-.section2 img {
-    width: 1348px;
-    height: 341px;
-    overflow: hidden;
-}
-
-
-
-/* section-3 */
-.section-3 {
-    align-items: center;
-    justify-content: center;
-}
-
-.section-3 h1 {
-
-    color: var(--dark-blue-color);
-    text-align: center;
+.section-1 h2,
+.section-4 h2,
+.section-5 h2 {
+    color: var(--black-color);
     font-family: "Cal Sans";
-    font-size: 60px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.45px;
 }
 
-.section-3 h3 {
-    color: var(--black-color);
-    font-family: "Helvetica Neue";
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 40px; /* 133.333% */
-    letter-spacing: 0.225px;
-    text-align: center;
-}
-
-.section-3 p {
+.section-1 h3,
+.section-4 h3,
+.section-5 h3 {
     color: var(--black-color);
     font-family: "Helvetica Neue";
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 30px */
-    letter-spacing: 0.15px;
+    line-height: normal;
+}
+
+
+.no h2 {
+    min-width: 80px;
+}
+
+.community-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.community-section .left {
+    flex: 1;
+}
+
+.community-section .right {
+    flex: 1;
+    min-width: 0;
+}
+
+.community-section .left h2 {
+    margin-bottom: 24px;
+}
+
+.community-section .buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .carousel {
@@ -443,6 +510,33 @@ main {
     to {
         transform: translateX(-50%);
     }
+}
+
+.faq {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.faq h1 {
+    color: var(--white-color);
+    text-align: center;
+    font-family: "Cal Sans";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+        
+}
+
+.faq h3 {
+    color: var(--white-color);
+    text-align: center;
+    font-family: "Cal Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+        
 }
 
 /* footer section */

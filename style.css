@@ -39,17 +39,6 @@ h1 {
     letter-spacing: 0.45px;
 }
 
-.white-bg h1 {
-    color: var(--dark-blue-color-color);
-    text-align: center;
-    font-family: "Cal Sans";
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.45px;
-}
-
 h2 {
     color: var(--white-color);
     font-family: "Cal Sans";
@@ -59,17 +48,8 @@ h2 {
     line-height: normal;
 
 }
-.section-2 h2 {
-    color: var(--black-color);
-    font-family: "Cal Sans";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 
-}
-
-.white-bg h3 {
+h3 {
     color: var(--white-color);
     font-family: "Helvetica Neue";
     font-size: 30px;
@@ -90,14 +70,13 @@ p {
     letter-spacing: 0.15px;
 }
 
-.white-bg p {
-    color: var(--black-color);
+a {
+    color: var(--white-color);
     font-family: "Helvetica Neue";
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 30px */
-    letter-spacing: 0.15px;
+    line-height: normal;
 }
 
 h4 {
@@ -163,25 +142,9 @@ nav ul {
     gap: 40px;
 }
 
-nav ul li a {
-    color: var(--white-color);
-    font-family: "Helvetica Neue";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
 
 nav a {
     color: var(--white-color);
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    /* font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    white-space: nowrap; */
-    color: #FFF;
     font-family: "Cal Sans";
     font-size: 21px;
     font-style: normal;
@@ -193,10 +156,27 @@ nav a {
 nav ul li a {
     font-family: "Helvetica Neue";
     font-style: normal;
-    font-weight: bold;
     font-size: 14px;
     line-height: 24px;
-    color: #ffffff;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+nav .blank-button {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+nav .white-button {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--dark-blue-color);
     text-decoration: none;
 }
 
