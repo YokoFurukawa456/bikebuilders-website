@@ -539,11 +539,79 @@ main {
         
 }
 
-/* footer section */
+/* ── Footer ───────────────────────────────────────────── */
 
-/* Carousel / scrolling text */
+/* backgroun ticker */
 
-/* Footer links container */
+.blue-bg {
+    background-color: var(--blue-color);
+    width: 100%;
+}
+
+/* Scrolling ticker */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 32px 0;
+}
+
+.carousel-text {
+    color: var(--white-color);
+    font-family: "Cal Sans";
+    font-size: 32px;
+    font-weight: 400;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.group {
+    display: flex;
+    gap: 40px;
+    padding-right: 40px;
+}
+
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Footer bottom row */
+.footer-bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-top: 70px;
+}
+
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    filter: brightness(10);
+}
+
+.footer-name {
+    color: var(--white-color);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
 .ft-links {
     display: flex;
     justify-content: flex-end; /* push all links to the right */
@@ -563,11 +631,15 @@ main {
 }
 
 /* Links style */
+
 .ft-links a {
-    color: white;
+    color: var(--white-color);
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    font-weight: 400;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    opacity: 0.85;
+    transition: opacity 0.2s;
 }
 
 .ft-links a:hover {
@@ -588,3 +660,48 @@ main {
         gap: 15px;
     }
 }
+
+
+/* ── Responsive ───────────────────────────────────────── */
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .wrapper {
+        padding: 40px 32px;
+    }
+
+    .nav-inner {
+        padding: 12px 32px;
+    }
+
+    .ft-links {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+
+
