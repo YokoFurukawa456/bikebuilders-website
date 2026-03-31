@@ -1,42 +1,211 @@
-<footer>
-    <div class="blue-bg">
-        <div class="carousel">
-            <div class="track">
-                <div class="group">
-                    <h2 class="carousel-text">STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP *</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Sora:wght@100..800&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gen_projects.css">
+</head>
+<body>
+    <!-- Navigation menu -->
+    <header>
+        <nav>
+            <div class="nav-inner">
+                <div class="nav-brand">
+                    <img src="../src/icons/Logo.svg" alt="BBB Logo" class="nav-logo"/>
+                    <a class="nav-title">Bike Builders of Berkeley</a>
                 </div>
-                <div class="group">
-                    <h2 class="carousel-text">STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP *</h2>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="footer-bottom">
-                <div class="footer-brand">
-                    <img src="../src/icons/Logo.svg" alt="BBB Logo" class="footer-logo"/>
-                    <span class="footer-name">Bike Builders<br>of Berkeley</span>
-                </div>
-                <ul class="ft-links">
-                    <div class="left">
-                        <li><a href="about_us/about_us.html">About Us</a></li>
-                        <li><a href="gen_projects/gen_projects.html">Projects</a></li>
-                        <li><a href="members/members.html">Members</a></li>
-                    </div>
-                    <div class="middle">
-                        <li><a href="sponsers/sponsers.html">Sponsors</a></li>
-                        <li><a href="contact/contact.html">Contact Us</a></li>
-                        <li><a href="apply/apply.html">Apply Now</a></li>
-                    </div>
-                    <div class="right">
-                        <li><a href="">LinkedIn ↗</a></li>
-                        <li><a href="">Instagram ↗</a></li>
-                        <li><a href="">Facebook ↗</a></li>
-                        <li><a href="">Github ↗</a></li>
-                    </div>
+                <ul class="nav-links">
+                    <li><a href="about_us/about_us.html">About Us</a></li>
+                    <li><a href="gen_projects/gen_projects.html">Projects</a></li>
+                    <li><a href="members/members.html">Members</a></li>
+                    <li><a href="sponsers/sponsers.html">Sponsors</a></li>
                 </ul>
+                <div class="buttons">
+                    <a class="blank-button" href="#">Contact Us</a>
+                    <a class="white-button" href="#">Apply Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End of desktop navigation menu -->
+    <main>
+
+        <div class="hero-section">
+            <!-- Left: text content -->
+            <div class="hero-left">
+                <h1>PROJECT<br>OVERVIEW</h1>
+                <p>
+                    Designed and built by the Bike Builders of Berkeley mountain bike
+                    team in fall 2023.<br><br>
+                    Our project is a steel full suspension mountain bike. This welded
+                    frame features a unique linkage design that passes through the
+                    center of the frame with custom links and pivot hardware.
+                </p>
+                <a class="learn-more-btn" href="gen_projects/projects.html">
+                    Learn more <span class="arrow">→</span>
+                </a>
+            </div>
+         
+            <!-- Right: overflow carousel -->
+            <div class="hero-carousel-track">
+         
+                <div class="hero-slide active">
+                    <img src="src/images/placeholder.png" alt="Mountain Bike V2" />
+                    <div class="slide-label">MOUNTAIN<br>BIKE V2</div>
+                    <button class="carousel-btn prev" onclick="heroSlide(-1)">&#8249;</button>
+                    <button class="carousel-btn next" onclick="heroSlide(1)">&#8250;</button>
+                </div>
+         
+                <div class="hero-slide">
+                    <img src="src/images/placeholder.png" alt="Gravel Bike V1" />
+                    <div class="slide-label">GRAVEL<br>BIKE V1</div>
+                    <button class="carousel-btn prev" onclick="heroSlide(-1)">&#8249;</button>
+                    <button class="carousel-btn next" onclick="heroSlide(1)">&#8250;</button>
+                </div>
+         
+                <div class="hero-slide">
+                    <img src="src/images/placeholder.png" alt="Welding Jig V3" />
+                    <div class="slide-label">WELDING<br>JIG V3</div>
+                    <button class="carousel-btn prev" onclick="heroSlide(-1)">&#8249;</button>
+                    <button class="carousel-btn next" onclick="heroSlide(1)">&#8250;</button>
+                </div>
+            </div>
+            <!-- End of the hero section -->
+        </div>
+        <div class="projects-outer">
+            <div class="white-bg">
+                <div class="projects-wrapper">
+                    <div class="projects">
+ 
+                        <!-- Top bar: search + description -->
+                        <div class="projects-topbar">
+                            <button class="search-btn" aria-label="Search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                </svg>
+                            </button>
+                            <p class="projects-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.
+                            </p>
+                        </div>
+ 
+                        <!-- Masonry-style grid -->
+                        <div class="projects-grid">
+ 
+                            <!-- Left column: small cards -->
+                            <div class="col-left">
+ 
+                                <div class="project-card">
+                                    <img src="src/images/placeholder.png" alt="Project 1"/>
+                                    <p class="project-label">PROJECT 1 / LOREM IPSUM DOLOR</p>
+                                </div>
+ 
+                                <div class="project-card">
+                                    <img src="src/images/placeholder.png" alt="Project 3"/>
+                                    <p class="project-label">PROJECT 3 /  EMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA</p>
+                                </div>
+ 
+                                <div class="project-card">
+                                    <img src="src/images/placeholder.png" alt="Project 5"/>
+                                    <p class="project-label">PROJECT 5 / LOREM IPSUM DOLOR</p>
+                                </div>
+ 
+                            </div>
+ 
+                            <!-- Middle column: slightly taller cards, offset down -->
+                            <div class="col-mid">
+ 
+                                <div class="project-card">
+                                    <img src="src/images/placeholder.png" alt="Project 2"/>
+                                    <p class="project-label">PROJECT 2 / LOREM IPSUM DOLOR SIT AMET CONSECTETUR</p>
+                                </div>
+ 
+                                <div class="project-card">
+                                    <img src="src/images/placeholder.png" alt="Project 4"/>
+                                    <p class="project-label">PROJECT 4 /  LOREM IPSUM DOLOR EMPOR INCIDIDUNT UT DOLORE MAGNA ALIQUA</p>
+                                </div>
+ 
+                                <div class="project-card">
+                                    <img src="src/images/placeholder.png" alt="Project 6"/>
+                                    <p class="project-label">PROJECT 6 / LOREM IPSUM DOLOR SIT AMET CONSECTETUR</p>
+                                </div>
+ 
+                            </div>
+ 
+                            <!-- Right column: large feature cards -->
+                            <div class="col-right">
+ 
+                                <div class="project-card project-card--large">
+                                    <img src="src/images/placeholder.png" alt="Project 7"/>
+                                    <p class="project-label">PROJECT 7 / LOREM IPSUM DOLOR SIT AMET CONSECTETUR NCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA</p>
+                                </div>
+ 
+                                <div class="project-card project-card--large">
+                                    <img src="src/images/placeholder.png" alt="Project 8"/>
+                                    <p class="project-label">PROJECT 8 /  AMET CONSECTETUR NCIDIDUNT UT LABORE ET  MAGNA</p>
+                                </div>
+ 
+                            </div>
+ 
+                        </div>
+                        <!-- end .projects-grid -->
+ 
+                    </div>
+                    <!-- end .projects -->
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+        <!-- end projects section -->
+    
+    </main>
+    <footer>
+        <div class="blue-bg">
+            <div class="carousel">
+                <div class="track">
+                    <div class="group">
+                        <h2 class="carousel-text">STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP *</h2>
+                    </div>
+                    <div class="group">
+                        <h2 class="carousel-text">STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP *</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="footer-bottom">
+                    <div class="footer-brand">
+                        <img src="../src/icons/Logo.svg" alt="BBB Logo" class="footer-logo"/>
+                        <span class="footer-name">Bike Builders<br>of Berkeley</span>
+                    </div>
+                    <ul class="ft-links">
+                        <div class="left">
+                            <li><a href="about_us/about_us.html">About Us</a></li>
+                            <li><a href="gen_projects/gen_projects.html">Projects</a></li>
+                            <li><a href="members/members.html">Members</a></li>
+                        </div>
+                        <div class="middle">
+                            <li><a href="sponsers/sponsers.html">Sponsors</a></li>
+                            <li><a href="contact/contact.html">Contact Us</a></li>
+                            <li><a href="apply/apply.html">Apply Now</a></li>
+                        </div>
+                        <div class="right">
+                            <li><a href="">LinkedIn ↗</a></li>
+                            <li><a href="">Instagram ↗</a></li>
+                            <li><a href="">Facebook ↗</a></li>
+                            <li><a href="">Github ↗</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
