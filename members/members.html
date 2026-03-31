@@ -1,42 +1,270 @@
-<footer>
-    <div class="blue-bg">
-        <div class="carousel">
-            <div class="track">
-                <div class="group">
-                    <h2 class="carousel-text">STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP *</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Sora:wght@100..800&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="members.css">
+</head>
+<body>
+    <!-- Navigation menu -->
+    <header>
+        <nav>
+            <div class="nav-inner">
+                <div class="nav-brand">
+                    <img src="../src/icons/Logo.svg" alt="BBB Logo" class="nav-logo"/>
+                    <a class="nav-title">Bike Builders of Berkeley</a>
                 </div>
-                <div class="group">
-                    <h2 class="carousel-text">STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP *</h2>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="footer-bottom">
-                <div class="footer-brand">
-                    <img src="../src/icons/Logo.svg" alt="BBB Logo" class="footer-logo"/>
-                    <span class="footer-name">Bike Builders<br>of Berkeley</span>
-                </div>
-                <ul class="ft-links">
-                    <div class="left">
-                        <li><a href="about_us/about_us.html">About Us</a></li>
-                        <li><a href="gen_projects/gen_projects.html">Projects</a></li>
-                        <li><a href="members/members.html">Members</a></li>
-                    </div>
-                    <div class="middle">
-                        <li><a href="sponsers/sponsers.html">Sponsors</a></li>
-                        <li><a href="contact/contact.html">Contact Us</a></li>
-                        <li><a href="apply/apply.html">Apply Now</a></li>
-                    </div>
-                    <div class="right">
-                        <li><a href="">LinkedIn ↗</a></li>
-                        <li><a href="">Instagram ↗</a></li>
-                        <li><a href="">Facebook ↗</a></li>
-                        <li><a href="">Github ↗</a></li>
-                    </div>
+                <ul class="nav-links">
+                    <li><a href="about_us/about_us.html">About Us</a></li>
+                    <li><a href="gen_projects/gen_projects.html">Projects</a></li>
+                    <li><a href="members/members.html">Members</a></li>
+                    <li><a href="sponsers/sponsers.html">Sponsors</a></li>
                 </ul>
+                <div class="buttons">
+                    <a class="blank-button" href="#">Contact Us</a>
+                    <a class="white-button" href="#">Apply Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End of desktop navigation menu -->
+    <body>
+        <main>
+            <!-- ── Members section ── -->
+        <section class="members-section">
+ 
+            <h1 class="members-title">MEMBERS</h1>
+ 
+            <!-- SVG dashed path that weaves through the layout -->
+            <svg class="dashed-path" viewBox="0 0 560 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M 380 60 C 520 100, 560 180, 400 260 C 200 340, 20 340, 20 420 C 20 500, 300 520, 280 600 C 260 680, 60 700, 20 760"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-dasharray="18 14"
+                    stroke-linecap="round"
+                />
+            </svg>
+ 
+            <div class="member-grid">
+ 
+                <!-- President -->
+                <div class="member-row">
+                    <span class="row-label">President</span>
+                    <div class="cards">
+                        <div class="member-card">
+                            <img src="src/images/placeholder.png" alt="Sophia Cambell" />
+                            <div class="card-overlay">
+                                <span class="member-name">Sophia Cambell</span>
+                                <div class="tags">
+                                    <span class="tag">Mechanical Eng.</span>
+                                    <span class="tag">Junior</span>
+                                    <span class="tag">She/Her</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Lead -->
+                <div class="member-row">
+                    <span class="row-label">Lead</span>
+                    <div class="cards">
+                        <div class="member-card">
+                            <img src="src/images/placeholder.png" alt="Pranav Amarnath" />
+                            <div class="card-overlay">
+                                <span class="member-name">Pranav Amarnath</span>
+                                <div class="tags">
+                                    <span class="tag">Mechanical Eng.</span>
+                                    <span class="tag">Junior</span>
+                                    <span class="tag">He/Him</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="src/images/placeholder.png" alt="Kevin Ying" />
+                            <div class="card-overlay">
+                                <span class="member-name">Kevin Ying</span>
+                                <div class="tags">
+                                    <span class="tag">EECS</span>
+                                    <span class="tag">Junior</span>
+                                    <span class="tag">He/Him</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Frame -->
+                <div class="member-row">
+                    <span class="row-label">Frame</span>
+                    <div class="cards">
+                        <div class="member-card">
+                            <img src="src/images/placeholder.png" alt="Justin Peck" />
+                            <div class="card-overlay">
+                                <span class="member-name">Justin Peck</span>
+                                <div class="tags">
+                                    <span class="tag">Mechanical Eng.</span>
+                                    <span class="tag">Senior</span>
+                                    <span class="tag">He/Him</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="src/images/placeholder.png" alt="Kian Rafian" />
+                            <div class="card-overlay">
+                                <span class="member-name">Kian Rafian</span>
+                                <div class="tags">
+                                    <span class="tag">Mechanical Eng.</span>
+                                    <span class="tag">Junior</span>
+                                    <span class="tag">He/Him</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="src/images/placeholder.png" alt="Luke Hollingsworth" />
+                            <div class="card-overlay">
+                                <span class="member-name">Luke Hollingsworth</span>
+                                <div class="tags">
+                                    <span class="tag">EECS</span>
+                                    <span class="tag">Junior</span>
+                                    <span class="tag">He/Him</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- CFRP -->
+                <div class="member-row">
+                    <span class="row-label">CFRP</span>
+                    <div class="cards">
+                        <div class="member-card">
+                            <img src="src/images/placeholder.png" alt="Edwin Luck" />
+                            <div class="card-overlay">
+                                <span class="member-name">Edwin Luck</span>
+                                <div class="tags">
+                                    <span class="tag">Material Science</span>
+                                    <span class="tag">Junior</span>
+                                    <span class="tag">He/Him</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Suspension -->
+                <div class="member-row">
+                    <span class="row-label">Suspension</span>
+                    <div class="cards">
+                        <div class="member-card">
+                            <img src="src/images/placeholder.png" alt="Grant Hough" />
+                            <div class="card-overlay">
+                                <span class="member-name">Grant Hough</span>
+                                <div class="tags">
+                                    <span class="tag">EECS</span>
+                                    <span class="tag">Sophomore</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+        </section>
+
+        <!-- ── Wavy ribbon banner ── -->
+        <div class="ribbon-wrap">
+            <svg class="wave-top" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,30 C360,70 1080,-10 1440,30 L1440,60 L0,60 Z" fill="#3c19ff"/>
+            </svg>
+            <div class="ribbon-banner">
+                <div class="ribbon-track">
+                    <div class="ribbon-group"><span>BIKE BUILDERS OF BERKELEY &nbsp; BIKE BUILDERS OF BERKELEY &nbsp; BIKE BUILDERS OF BERKELEY &nbsp; BIKE BUILDERS OF BERKELEY &nbsp; BIKE BUILDERS OF BERKELEY &nbsp;</span></div>
+                    <div class="ribbon-group"><span>BIKE BUILDERS OF BERKELEY &nbsp; BIKE BUILDERS OF BERKELEY &nbsp; BIKE BUILDERS OF BERKELEY &nbsp; BIKE BUILDERS OF BERKELEY &nbsp; BIKE BUILDERS OF BERKELEY &nbsp;</span></div>
+                </div>
+            </div>
+            <svg class="wave-bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,30 C360,-10 1080,70 1440,30 L1440,0 L0,0 Z" fill="#3c19ff"/>
+            </svg>
+        </div>
+ 
+        <!-- ── Founders & Leaders ── -->
+        <section class="founders-section">
+            <h2 class="founders-title">Founders and Leaders</h2>
+            <p class="founders-sub">Our members are amazing, and we are extra grateful for our leaders who put in unimaginable extra hours of work and emotional investment.</p>
+ 
+            <div class="founders-grid">
+                <div class="member-card founder-card">
+                    <img src="src/images/placeholder.png" alt="Zevin Posner" />
+                    <div class="card-overlay">
+                        <span class="member-name">Zevin Posner</span>
+                        <div class="tags">
+                            <span class="tag tag--gold">President 2021–2024</span>
+                            <span class="tag">Co-founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-card founder-card">
+                    <img src="src/images/placeholder.png" alt="Jacob Pashman" />
+                    <div class="card-overlay">
+                        <span class="member-name">Jacob Pashman</span>
+                        <div class="tags">
+                            <span class="tag">Co-founder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+    </body>
+    <footer>
+        <div class="blue-bg">
+            <div class="carousel">
+                <div class="track">
+                    <div class="group">
+                        <h2 class="carousel-text">STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP *</h2>
+                    </div>
+                    <div class="group">
+                        <h2 class="carousel-text">STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP * STAY IN THE LOOP *</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="footer-bottom">
+                    <div class="footer-brand">
+                        <img src="../src/icons/Logo.svg" alt="BBB Logo" class="footer-logo"/>
+                        <span class="footer-name">Bike Builders<br>of Berkeley</span>
+                    </div>
+                    <ul class="ft-links">
+                        <div class="left">
+                            <li><a href="about_us/about_us.html">About Us</a></li>
+                            <li><a href="gen_projects/gen_projects.html">Projects</a></li>
+                            <li><a href="members/members.html">Members</a></li>
+                        </div>
+                        <div class="middle">
+                            <li><a href="sponsers/sponsers.html">Sponsors</a></li>
+                            <li><a href="contact/contact.html">Contact Us</a></li>
+                            <li><a href="apply/apply.html">Apply Now</a></li>
+                        </div>
+                        <div class="right">
+                            <li><a href="">LinkedIn ↗</a></li>
+                            <li><a href="">Instagram ↗</a></li>
+                            <li><a href="">Facebook ↗</a></li>
+                            <li><a href="">Github ↗</a></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>

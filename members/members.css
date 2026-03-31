@@ -1,3 +1,347 @@
+:root {
+    --background-color: radial-gradient(83.92% 53.89% at 0% 72.04%, rgba(229, 224, 255, 0.20) 0%, rgba(229, 224, 255, 0.00) 100%), radial-gradient(105.62% 43.95% at 103.77% 5.94%, rgba(229, 224, 255, 0.20) 0%, rgba(229, 224, 255, 0.00) 100%), #0B1F87;
+    /* linear-gradient(20deg, #0b1f87, #e5e0ff) */
+    /* #0b1f87; */
+    --black-color: #232428;;
+    --blue-color:#3c19ff;
+    --dark-blue-color: #091c78;
+    --purple-color: #E5E0FF;
+    --white-color: #ffffff;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--background-color);
+    color: var(--white-color);
+}
+
+/* fonts */
+
+p {
+    overflow: hidden;
+    color: var(--black-color);
+    text-overflow: ellipsis;
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 27px */
+    letter-spacing: -0.36px;
+}
+
+/* ── Nav ───────────────────────────────────────────────── */
+
+header {
+    width: 100%;
+    background: var(--dark-blue-color);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+}
+
+nav { width: 100%; }
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 14px 80px;
+    width: 100%;
+}
+
+.nav-brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.nav-logo  { width: 28px; height: 28px; }
+
+.nav-title {
+    color: var(--white-color);
+    font-family: "Cal Sans";
+    font-size: 18px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 36px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: .9;
+    transition: opacity .2s;
+}
+
+.nav-links li a:hover { opacity: 1; }
+
+.buttons { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
+
+.blank-button {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 7px 20px; height: 34px; border-radius: 50px;
+    border: 1px solid rgba(255,255,255,.8);
+    color: var(--white-color); font-size: 13px; text-decoration: none;
+    transition: background .2s;
+}
+.blank-button:hover { background: rgba(255,255,255,.1); }
+
+.white-button {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 7px 20px; height: 34px; border-radius: 50px;
+    background: var(--white-color);
+    color: var(--dark-blue-color); font-size: 13px; font-weight: 500; text-decoration: none;
+    transition: opacity .2s;
+}
+.white-button:hover { opacity: .9; }
+
+/* ── Section scaffolding ────────────────────────────────── */
+
+main { padding-top: 60px; }
+
+
+.members-section {
+    position: relative;
+    padding: 80px 150px;
+    overflow: hidden;     /* clip the SVG path at edges */
+}
+ 
+.members-title {
+    font-family: "Cal Sans";
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: .08em;
+    text-align: center;
+    color: var(--white-color);
+    margin-bottom: 48px;
+}
+ 
+/* ── SVG dashed path ──────────────────────────────────── */
+ 
+.dashed-path {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+ 
+/* ── Category rows ────────────────────────────────────── */
+ 
+.member-grid {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;                /* rows butt up, spacing handled per-row */
+}
+ 
+.member-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 20px 0;
+}
+ 
+/* Rotated vertical label on the left */
+.row-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);    /* read bottom-to-top */
+    font-family: "Cal Sans";
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: .06em;
+    color: var(--white-color);
+    width: 48px;
+    flex-shrink: 0;
+    text-align: center;
+    padding-left: 24px;
+    user-select: none;
+}
+ 
+/* Cards container — left-aligned, grows right */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-left: 24px;
+}
+ 
+/* ── Individual member card ───────────────────────────── */
+ 
+.member-card {
+    position: relative;
+    width: 270px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+ 
+.member-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+ 
+/* Dark gradient overlay */
+.member-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+        rgba(9, 28, 120, 0.85) 0%,
+        rgba(9, 28, 120, 0.2) 55%,
+        transparent 100%);
+    pointer-events: none;
+}
+ 
+/* Name + tags sit above the gradient */
+.card-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+ 
+.member-name {
+    color: var(--white-color);
+    font-family: "Cal Sans";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.15;
+    
+}
+ 
+/* Tag pills */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+ 
+.tag {
+    display: inline-block;
+    background: var(--purple-color);
+    color: var(--dark-blue-color);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .03em;
+    padding: 2px 7px;
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+}
+ 
+.tag--gold {
+    border: 1px solid rgba(255,255,255,.8);
+    color: var(--white-color); 
+    background: none;
+}
+
+.ribbon-wrap {
+    position: relative;
+    margin: 20px 0 0;
+    z-index: 1;
+}
+ 
+.wave-top,
+.wave-bottom {
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+ 
+.ribbon-banner {
+    background: var(--blue-color);
+    overflow: hidden;
+    padding: 18px 0;
+}
+ 
+.ribbon-track {
+    display: flex;
+    width: max-content;
+    animation: ribbonScroll 18s linear infinite;
+}
+ 
+.ribbon-group span {
+    color: var(--white-color);
+    font-family: "Cal Sans";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    white-space: nowrap;
+    padding-right: 40px;
+}
+ 
+@keyframes ribbonScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+ 
+.founders-section {
+    padding: 60px 80px 80px;
+    text-align: center;
+}
+ 
+.founders-title {
+    font-family: "Cal Sans";
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--white-color);
+    margin-bottom: 14px;
+}
+ 
+.founders-sub {
+    color: rgba(255,255,255,.75);
+    font-size: 24px;
+    line-height: 1.65;
+    max-width: 480px;
+    margin: 0 auto 40px;
+    
+}
+ 
+.founders-grid {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+ 
+/* Founder cards are a bit wider */
+.founder-card {
+    width: 270px;
+    height: 300px;
+}
+
+.founders-grid .member-name {
+    color: var(--white-color);
+    font-family: "Cal Sans";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.15;
+    text-align: left;
+}
+ 
+
+
+
 /* ── Footer ───────────────────────────────────────────── */
 
 /* backgroun ticker */
