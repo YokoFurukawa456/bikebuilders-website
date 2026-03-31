@@ -96,19 +96,38 @@ h5 {
     font-weight: 400;
     line-height: normal;
 }
+/* ── Layout ───────────────────────────────────────────── */
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: "Cal Sans", sans-serif;
+    background: var(--background-color);
+}
+
+main {
+    width: 100%;
+    padding-top: 80px; /* offset fixed header */
+}
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px, 60px;
     width: 100%;
-    background-color: var(--blue-color);
+    background: var(--dark-blue-color);
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 100;
 }
 
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 80px;
+}
+
+/* ── Header / Nav ─────────────────────────────────────── */
 /* nav */
+
 nav {
     /* display: flex;
     justify-content: space-between;
@@ -116,95 +135,163 @@ nav {
     /* position: fixed; */
     top: 0;
     left: 0;
+    width: 100%;
     padding: 5px 80px;
     background-color: var(--background-color);
     z-index: 100;
 }
 
+nav {
+    width: 100%;
+}
+
 .nav-inner {
-    display: inline-flex;
-    padding: 8px 80px;
+    display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 32px;
+    padding: 14px 80px;
+    width: 100%; 
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.nav-logo {
+    width: 28px;
+    height: 28px;
+}
+
+.nav-title {
+    color: var(--white-color);
+    font-family: "Cal Sans";
+    font-size: 18px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
 }
 
 .nav-links {
     display: flex;
     padding: 8px 24px;
+    list-style: none;
+    gap: 36px;
+    flex: 1;
     justify-content: center;
     align-items: center;
 }
 
-nav ul {
+.nav-links li a {
+    color: var(--white-color);
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.nav-links li a:hover {
+    opacity: 1;
+}
+
+/* buttons */
+
+.buttons {
     display: flex;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 24px;
     align-items: center;
-    list-style: none;
-    gap: 40px;
-}
-
-
-nav a {
-    color: var(--white-color);
-    font-family: "Cal Sans";
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    white-space: nowrap;
-}
-
-nav ul li a {
+    flex-shrink: 0;
     font-family: "Helvetica Neue";
-    font-style: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: var(--white-color);
     text-decoration: none;
+    transition: background 0.2s;
 }
 
-nav .blank-button {
-    font-family: "Helvetica Neue";
-    font-style: normal;
-    font-size: 14px;
-    line-height: 24px;
+.blank-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 20px;
+    height: 34px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.8);
     color: var(--white-color);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
     text-decoration: none;
+    transition: background 0.2s;
 }
 
-nav .white-button {
-    font-family: "Helvetica Neue";
-    font-style: normal;
-    font-size: 14px;
-    line-height: 24px;
+.blank-button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.white-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 20px;
+    height: 34px;
+    border-radius: 50px;
+    background: var(--white-color);
     color: var(--dark-blue-color);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
     text-decoration: none;
+    transition: opacity 0.2s;
 }
 
-/* body */
-
-body {
-    margin: 0;
-    width: 100%;
-    font-family: "Cal Sans";
-    font-weight: 400;
-    font-style: normal;
-    background: var(--background-color)
+.white-button:hover {
+    opacity: 0.9;
 }
 
-main {
-    width:100%;
-    margin:0 auto;
-
+.blue-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 36px;
+    height: 42px;
+    border-radius: 50px;
+    background: var(--blue-color);
+    color: var(--white-color);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s;
 }
 
-.wrapper {
-    max-width:100%;
-    margin:0 auto;
-    padding-left: 195px;   
-    padding-right: 195px;
-    padding-bottom: 50px;
-
+.blue-button:hover {
+    opacity: 0.85;
 }
+
+.purple-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 36px;
+    height: 42px;
+    border-radius: 50px;
+    background: var(--purple-color);
+    color: var(--dark-blue-color);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.blue-button:hover {
+    opacity: 0.85;
+}
+
+
 
 .hero-wrapper {
     max-width:100%;
@@ -250,77 +337,6 @@ main {
     height: 338px;
     margin:0 auto;
     background-color: var(--blue-color);
-}
-
-/* buttons */
-
-.buttons {
-    display: flex;
-    gap: 12px;
-}
-
-.blank-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-
-    /* width: 232px; */
-    height: 35px;
-
-    border-radius: 50px;
-    border: 1px solid white;
-
-    color: white;
-    text-decoration: none;
-}
-
-.white-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-
-    /* width: 232px; */
-    height: 35px;
-
-    border-radius: 50px;
-    background: var(--white-color);
-
-    color: var(--dark-blue-color);
-    text-decoration: none;
-}
-
-.blue-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-
-    /* width: 232px; */
-    height: 35px;
-
-    border-radius: 50px;
-    background: var(--blue-color);
-
-    color: var(--white-color);
-    text-decoration: none;
-}
-
-.purple-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-
-    /* width: 232px; */
-    height: 35px;
-
-    border-radius: 50px;
-    background: var(--purple-color);
-
-    color: var(--dark-blue-color);
-    text-decoration: none;
 }
 
 
