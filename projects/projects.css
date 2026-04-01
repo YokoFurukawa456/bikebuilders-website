@@ -277,6 +277,13 @@ main { padding-top: 60px; }
     color: var(--white-color);
 }
 
+.overview-left h2 {
+    font-family: "Cal Sans";
+    font-size: 45px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
 .overview-block p {
     color: var(--white-color);
     font-size: 16px;
@@ -352,35 +359,63 @@ main { padding-top: 60px; }
 
 /* Left column — dark navy bg with photos */
 .data-left {
-    margin-top: 50px;
     flex: 1 1 45%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    background-color: var(--dark-blue-color);   /* dark navy */
-    padding: 48px 40px;
+    gap: 6px;                        /* dark gap between top and bottom rows */
+    background-color: var(--dark-blue-color);
+    padding: 6px;                    /* thin dark border all around */
+    margin-top: 80px;
 }
 
-.data-photo-large img {
+/* Top row — single wide image */
+.data-photo-top {
     width: 100%;
-    height: 240px;
+    flex-shrink: 0;
+}
+
+.data-photo-top img {
+    width: 100%;
+    height: 400px;
     object-fit: cover;
     display: block;
-    border-radius: 4px;
 }
 
-.data-photo-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;   /* 2 cols in bottom row like screenshot */
-    gap: 8px;
+/* Bottom row — tall left + two stacked right */
+.data-photo-bottom {
+    display: flex;
+    gap: 6px;                        /* dark gap between columns */
+    flex: 1;
 }
 
-.data-photo-row img {
+/* Left: one tall image */
+.data-photo-tall {
+    flex: 1.4;                       /* slightly wider than right column */
+    overflow: hidden;
+}
+
+.data-photo-tall img {
     width: 100%;
-    height: 160px;
+    height: 100%;
+    min-height: 280px;
     object-fit: cover;
     display: block;
-    border-radius: 4px;
+}
+
+/* Right: two images stacked */
+.data-photo-stack {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.data-photo-stack img {
+    width: 100%;
+    flex: 1;
+    min-height: 130px;
+    object-fit: cover;
+    display: block;
 }
 
 /* Right column — light lavender/purple bg with text */
@@ -389,7 +424,7 @@ main { padding-top: 60px; }
     display: flex;
     flex-direction: column;
     gap: 28px;
-    background-color: #E5E0FF;   /* light purple */
+    background-color: var(--purple-color);   /* light purple */
     padding: 48px 52px;
 }
 
