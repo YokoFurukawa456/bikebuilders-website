@@ -435,6 +435,41 @@ nav {
     letter-spacing: 0.15px;
 }
 
+/* ── Ribbon banner ──────────────────────────────────────── */
+
+.ribbon-banner {
+    width: 100%;
+    background: var(--blue-color);
+    overflow: hidden;
+    padding: 22px 0;
+    /* diagonal skew matching the screenshot */
+    transform: rotate(-2deg) scaleX(1.05);
+    margin: 40px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.ribbon-track {
+    display: flex;
+    width: max-content;
+    animation: ribbonScroll 18s linear infinite;
+}
+
+.ribbon-group span {
+    color: var(--white-color);
+    font-family: "Cal Sans";
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: .08em;
+    white-space: nowrap;
+    padding-right: 60px;
+}
+
+@keyframes ribbonScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
 /* section-2 */
 .section-2 {
     align-items: center;
