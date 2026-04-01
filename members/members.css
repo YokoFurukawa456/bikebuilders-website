@@ -41,6 +41,19 @@ header {
     z-index: 100;
 }
 
+.blue-bg {
+    max-width:100%;
+    height: 338px;
+    margin:0 auto;
+    background-color: var(--blue-color);
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 80px;
+}
+
 nav { width: 100%; }
 
 .nav-inner {
@@ -346,9 +359,22 @@ main { padding-top: 60px; }
 
 /* backgroun ticker */
 
-.blue-bg {
-    background-color: var(--blue-color);
-    width: 100%;
+footer .blue-bg {
+    height: auto; 
+    min-height: 338px;
+    padding-bottom: 40px; /* Ensures space at the very bottom */
+}
+
+/* 2. Ensure no hidden overflow is pushing the page down */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents the ribbon from causing horizontal scroll/bottom gaps */
+}
+
+/* 3. Reset any stray margins on the footer wrapper */
+footer .wrapper {
+    padding-bottom: 60px; /* Control the bottom gap here specifically */
 }
 
 /* Scrolling ticker */

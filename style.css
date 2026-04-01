@@ -824,9 +824,22 @@ nav {
 
 /* backgroun ticker */
 
-.blue-bg {
-    background-color: var(--blue-color);
-    width: 100%;
+footer .blue-bg {
+    height: auto; 
+    min-height: 338px;
+    padding-bottom: 40px; /* Ensures space at the very bottom */
+}
+
+/* 2. Ensure no hidden overflow is pushing the page down */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents the ribbon from causing horizontal scroll/bottom gaps */
+}
+
+/* 3. Reset any stray margins on the footer wrapper */
+footer .wrapper {
+    padding-bottom: 60px; /* Control the bottom gap here specifically */
 }
 
 /* Scrolling ticker */
