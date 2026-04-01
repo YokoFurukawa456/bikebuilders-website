@@ -354,7 +354,7 @@ nav {
 }
 
 .hero-section .left {
-    flex: 1 1 400px;             
+    flex: 1 1 400px;       
 }
 
 .hero-section .left h1{
@@ -366,6 +366,7 @@ nav {
     line-height: 76.188px; /* 79.363% */
     letter-spacing: 0.72px;
     text-align: left;
+    padding-bottom: 20px;
 }
 
 .hero-section .right {
@@ -527,8 +528,10 @@ nav {
     font-weight: 400;
     line-height: 150%; /* 30px */
     letter-spacing: 0.15px;
-    padding: 100px, 40px;
+
+    padding-bottom: 20px;
 }
+
 .carousel {
     width: 100%;
     overflow: hidden;
