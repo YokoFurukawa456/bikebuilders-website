@@ -285,6 +285,8 @@ nav {
 }
 
 
+/* hero section */
+
 .hero-wrapper {
     max-width:100%;
     margin:0 auto;
@@ -293,79 +295,19 @@ nav {
     padding-bottom: 50px;
 
 }
-
-.photo1 {
-    display: flex;
-    flex-direction: column;
-    width: 470.429px;
-    height: 447.908px;
-    align-items: flex-start;
-    justify-content: flex-end;
-    gap: 8.67px;
-    padding: 13.87px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-shadow: inset 0px 0px 81.32px #00000040;
-}
-  
-.photo2 {
-    display: flex;
-    width: 425.074px;
-    height: 346.454px;
-    align-items: flex-end;
-    gap: 8.67px;
-    padding: 13.87px;
-    position: absolute;
-    top: 0;
-    left: 561px;
-}
-  
-.photo3 {
-    display: flex;
-    width: 425.074px;
-    height: 219.988px;
-    align-items: flex-end;
-    gap: 8.67px;
-    padding: 13.87px;
-    position: absolute;
-    top: 228px;
-    left: 344px;
-}
-  
-.photo4 {
-    display: flex;
-    width: 425.072px;
-    height: 147.721px;
-    align-items: flex-end;
-    gap: 8.67px;
-    padding: 13.87px;
-    position: absolute;
-    top: 228px;
-    left: 669px;
-}
-
-.photo5 {
-    display: flex;
-    flex-direction: column;
-    width: 425.074px;
-    height: 314.572px;
-    align-items: flex-start;
-    justify-content: flex-end;
-    gap: 8.67px;
-    padding: 13.87px;
-    position: absolute;
-    top: 0;
-    left: 344px;
+/* ── Hero photo mosaic ── */
+.hero-section .left {
+    width: 100%;
 }
 
 .photos {
     position: relative;
-    width: 1005px;
-    height: 457px;
-    margin: 60px auto;
+    width: 100%;
+    max-width: 1000px;
+    height: 460px;
+    margin: 40px 0 0;
 }
-  
+
 .photos img {
     position: absolute;
     width: 100%;
@@ -373,6 +315,7 @@ nav {
     object-fit: cover;
     top: 0;
     left: 0;
+    border-radius: 4px;
 }
 
 .photo1,
@@ -381,8 +324,24 @@ nav {
 .photo4,
 .photo5 {
     overflow: hidden;
+    position: absolute;
+    border-radius: 4px;
 }
-  
+
+/* Large left photo */
+.photo1 { width: 38%; height: 100%; top: 0; left: 0; }
+
+/* Center-top photo */
+.photo2 { width: 28%; height: 60%; top: 0; left: 40%; }
+
+/* Center-bottom photo */
+.photo3 { width: 28%; height: 38%; bottom: 0; left: 40%; }
+
+/* Right-top photo */
+.photo4 { width: 29%; height: 48%; top: 0; right: 0; }
+
+/* Right-bottom photo */
+.photo5 { width: 29%; height: 49%; bottom: 0; right: 0; }
 
 /* background */
 
@@ -391,7 +350,6 @@ nav {
     margin:0 auto;
     background-color: var(--white-color);
     margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 .blue-bg {
@@ -434,6 +392,22 @@ nav {
         padding: 200px 5% 0 5%;
     }
 
+}
+
+/* ── Two stacked wide images ── */
+.images {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;          /* no side padding — bleeds to wrapper edge */
+}
+
+.images img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
 }
 
 /* section-1 */
@@ -479,7 +453,86 @@ nav {
 
 
 
-/* section-3 */
+/* section-3 FAQ */
+/* ── FAQ heading row ── */
+.faq-heading-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.section-3 h1 {
+    font-family: "Cal Sans";
+    font-size: 96px;
+    font-weight: 400;
+    color: var(--dark-blue-color);
+    text-align: left;
+    letter-spacing: .04em;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.faq-rule {
+    flex: 1;
+    height: 1px;
+    background: rgba(0,0,0,.2);
+}
+
+/* ── FAQ accordion ── */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding: 0;
+}
+
+.faq-item:first-child {
+    border-top: 1px solid rgba(0,0,0,.15);
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+    font-family: "Cal Sans";
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--dark-blue-color);
+    cursor: pointer;
+    list-style: none;       /* hide default triangle */
+    user-select: none;
+}
+
+/* Hide default marker in all browsers */
+.faq-item summary::-webkit-details-marker { display: none; }
+
+/* Chevron icon via pseudo-element */
+.faq-item summary::after {
+    content: '⌄';
+    font-size: 22px;
+    color: var(--dark-blue-color);
+    transition: transform .25s ease;
+    flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.faq-item p {
+    padding: 0 0 20px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+    text-align: left;
+}
+
 .section-3 {
     align-items: center;
     justify-content: center;
@@ -565,9 +618,22 @@ nav {
 
 /* backgroun ticker */
 
-.blue-bg {
-    background-color: var(--blue-color);
-    width: 100%;
+footer .blue-bg {
+    height: auto; 
+    min-height: 338px;
+    padding-bottom: 40px; /* Ensures space at the very bottom */
+}
+
+/* 2. Ensure no hidden overflow is pushing the page down */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents the ribbon from causing horizontal scroll/bottom gaps */
+}
+
+/* 3. Reset any stray margins on the footer wrapper */
+footer .wrapper {
+    padding-bottom: 60px; /* Control the bottom gap here specifically */
 }
 
 /* Scrolling ticker */
